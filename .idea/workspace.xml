@@ -5,52 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c688e0e9-3582-49f4-a87e-d93262ab6eec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cau_1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/androidTest/java/com/example/cau_1/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/ui/theme/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/ui/theme/Theme.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/ui/theme/Type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/app/src/test/java/com/example/cau_1/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cau_1/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cau_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cau_1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,25 +17,26 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=D:\AVD\.android\avd\Medium_Phone_API_27.avd)]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kyao22"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kyao22&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kyao22/083205004013_NguyenHoHoangPhuc_Baitap2.git",
-    "accountId": "ddeda96e-a9c6-48cf-a35c-a081789ae2ec"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kyao22/083205004013_NguyenHoHoangPhuc_Baitap2.git&quot;,
+    &quot;accountId&quot;: &quot;ddeda96e-a9c6-48cf-a35c-a081789ae2ec&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2twDkDCgdN5vdK1Dlul7g5cZeSu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -86,14 +44,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Kotlin.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/LTMobile/083205004013_NguyenHoHoangPhuc_Baitap2",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
