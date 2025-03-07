@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -40,6 +42,7 @@ fun AgeCheckerApp() {
     var name by remember { mutableStateOf("") }
     var age by remember { mutableStateOf("") }
     var result by remember { mutableStateOf("") }
+    var showDialog by remember { mutableStateOf(false)}
 
     Column(
         modifier = Modifier
@@ -56,6 +59,7 @@ fun AgeCheckerApp() {
             label = { Text("Nhập tên") },
             onValueChange = { name = it },
             modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
             keyboardOptions = KeyboardOptions(
                 imeAction = ImeAction.Next
             )
@@ -67,31 +71,57 @@ fun AgeCheckerApp() {
             value = age,
             onValueChange = { age = it },
             label = { Text(text = "Tuổi") },
-            keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
-            modifier = Modifier.fillMaxWidth()
+            singleLine = true,
+            keyboardOptions = KeyboardOptions.Default.copy(
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done),
+            modifier = Modifier.fillMaxWidth(),
+            keyboardActions = KeyboardActions(
+                onDone = {
+                    result = ageCheck(age, name)
+                    showDialog = true
+                }
+            )
         )
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(
-            onClick = {
-                val ageInt = age.toIntOrNull()
-                result = when {
-                    ageInt == null -> "Vui lòng nhập số tuổi hợp lệ!"
-                    ageInt > 65 -> "$name là Người già"
-                    ageInt in 6..65 -> "$name là Người lớn"
-                    ageInt in 2..5 -> "$name là Trẻ em"
-                    else -> "$name là Em bé"
+        Button(onClick = {
+                result = ageCheck(age, name)
+                showDialog = true
                 }
-            },
-            modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "Kiểm tra")
         }
+        if (showDialog){
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = { Text("Kết Quả") },
+                text = { Text("Kết quả kiểm tra: $result") },
+                confirmButton = {
+                    Button(onClick = { showDialog = false }) {
+                        Text("Đóng")
+                    }
+                }
+            )
+        }
+    }
+}
 
-        Spacer(modifier = Modifier.height(16.dp))
 
-        Text(text = result, style = MaterialTheme.typography.bodyLarge)
+
+fun ageCheck(age: String, name: String):String {
+    val ageInt = age.toIntOrNull()
+    var temp = "Bạn"
+    if (name !== ""){
+        temp = name
+    }
+    return when {
+        ageInt == null -> "Vui lòng nhập số tuổi hợp lệ!"
+        ageInt > 65 -> "$temp là Người già"
+        ageInt in 6..65 -> "$temp là Người lớn"
+        ageInt in 2..5 -> "$temp là Trẻ em"
+        else -> "$temp là Em bé"
     }
 }
 
