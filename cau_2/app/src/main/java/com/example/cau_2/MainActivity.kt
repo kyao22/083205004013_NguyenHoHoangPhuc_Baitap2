@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,10 +15,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.material.BottomNavigation
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.material.BottomNavigationItem
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.material.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Book
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
@@ -25,6 +37,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
@@ -44,20 +57,24 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LibraryManagementScreen()
+            BottomNavBar()
         }
     }
 }
 
 @Composable
-fun LibraryManagementScreen() {
+fun QuanLyScreen() {
     var employeeName by remember { mutableStateOf("Nguyen Van A") }
     var showDialog by remember { mutableStateOf(false)}
-    var temp by remember { mutableStateOf(Book("a", "a", 0, "a")) }
+    var temp by remember { mutableStateOf(Book("a", "a", 0)) }
     val books = remember {
         mutableStateListOf(
-            Book("Sách 01", "Tác giả A", 100, "Nguyen Van A"),
-            Book("Sách 02", "Tác giả B", 200, "Nguyen Van A")
+            Book("Sách 01", "Tác giả A", 100),
+            Book("Sách 02", "Tác giả B", 200),
+            Book("Sách 03", "Tác giả B", 280),
+            Book("Sách 04", "Tác giả C", 250),
+            Book("Sách 05", "Tác giả D", 210),
+            Book("Sách 06", "Tác giả E", 200)
         )
     }
     val selectedBooks = remember { mutableStateMapOf<Book, Boolean>() }
@@ -133,14 +150,14 @@ fun LibraryManagementScreen() {
 
         if (showDialog) {
             AlertDialog(
+                modifier = Modifier.fillMaxWidth(),
                 onDismissRequest = { showDialog = false },
                 title = { Text(text = "Thông tin sách") },
                 text = {
                     Column {
-                        Text(text = "📖 Tiêu đề: ${temp.getTitle()}")
-                        Text(text = "✍️ Tác giả: ${temp.getAuthor()}")
-                        Text(text = "💰 Giá: ${temp.getPrice()} $")
-                        Text(text = "📌 Người phụ trách: ${temp.getPersonInCharge()}")
+                        Text(text = "📖 Tiêu đề: ${temp.getTitle()}", fontSize = 17.sp)
+                        Text(text = "✍️ Tác giả: ${temp.getAuthor()}", fontSize = 17.sp)
+                        Text(text = "💰 Giá: ${temp.getPrice()} $", fontSize = 17.sp)
                     }
                 },
                 confirmButton = {
@@ -153,8 +170,86 @@ fun LibraryManagementScreen() {
     }
 }
 
+@Composable
+fun DSSachScreen() {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(text = "Danh sách Sách", fontSize = 20.sp, color = Color.Black)
+    }
+}
+
+@Composable
+fun NhanVienScreen() {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(text = "Quản lý Nhân viên", fontSize = 20.sp, color = Color.Black)
+    }
+}
+
+
+@Composable
+fun BottomNavBar() {
+    var selectedIndex by remember { mutableIntStateOf(0) }
+
+    val items = listOf("Quản lý", "DS Sách", "Nhân viên")
+    val icons = listOf(
+        Icons.Filled.Home,
+        Icons.Filled.Book,
+        Icons.Filled.Person
+    )
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.weight(1f)) {
+            when (selectedIndex) {
+                0 -> QuanLyScreen()
+                1 -> DSSachScreen()
+                2 -> NhanVienScreen()
+            }
+        }
+
+        BottomNavigation(
+            modifier = Modifier.fillMaxHeight(0.075f),
+            backgroundColor = Color.White,
+            elevation = 10.dp,
+
+        ) {
+            items.forEachIndexed { index, item ->
+                BottomNavigationItem(
+                    icon = {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Icon(
+                                imageVector = icons[index],
+                                contentDescription = item,
+                                modifier = Modifier.size(32.dp),
+                                tint = if (index == selectedIndex) Color.Blue else Color.Gray
+                            )
+                            Text(
+                                text = item,
+                                fontSize = 12.sp,
+                                modifier = Modifier.padding(top = 4.dp),
+                                color = if (index == selectedIndex) Color.Blue else Color.Gray
+                            )
+                        }
+                    },
+                    selected = index == selectedIndex,
+                    onClick = { selectedIndex = index }
+                )
+            }
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    LibraryManagementScreen()
+    BottomNavBar()
 }

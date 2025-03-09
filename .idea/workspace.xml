@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c688e0e9-3582-49f4-a87e-d93262ab6eec" name="Changes" comment="">
+    <list default="true" id="c688e0e9-3582-49f4-a87e-d93262ab6eec" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cau_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cau_1/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/cau_1/app/src/main/java/com/example/cau_1/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/LTMobile/083205004013_NguyenHoHoangPhuc_Baitap2",
+    "last_opened_file_path": "D:/LTMobile/083205004013_NguyenHoHoangPhuc_Baitap2/cau_2",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -68,6 +66,27 @@
       <option name="presentableId" value="Default" />
       <updated>1741254385423</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1741452330632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741452330632</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1741511578883</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741511578883</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

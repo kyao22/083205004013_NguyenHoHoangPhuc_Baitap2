@@ -41,6 +41,8 @@ android {
 
 dependencies {
 
+    implementation("androidx.compose.material:material-icons-extended:1.4.3")
+    implementation("androidx.compose.material:material:1.5.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
