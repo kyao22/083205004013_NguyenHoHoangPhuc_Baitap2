@@ -9,10 +9,11 @@
   
 ## Câu 2:
 - Tạo data class book để chứa thông tin sách.
+- Dùng BottomNavigation để tạo thanh tabbar.
 - Dùng LazyColumn để hiển thị danh sách sách.
 - Hiện DiaLog chứa thông tin sách khi nhấn vào sách.
 ## Hình ảnh mô tả cho câu 2: 
 - Giao diện ứng dụng:  
-![img_1.png](img_1.png)  
+![img_1.png](img_1.png)
 - DiaLog:  
 ![img_2.png](img_2.png)
